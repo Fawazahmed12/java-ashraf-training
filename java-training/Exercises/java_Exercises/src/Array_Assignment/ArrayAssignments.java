@@ -1,4 +1,4 @@
-package java_assignment;
+package Array_Assignment;
 
 import java.util.ArrayList;
 import java.util.HashMap;

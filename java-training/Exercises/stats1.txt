@@ -1,0 +1,4 @@
+ConfigurationContainer
+LongestWord line = 11
+First character of LongestWord line = p
+Last character of LongestWord line = e

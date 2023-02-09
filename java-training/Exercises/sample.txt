@@ -1,0 +1,17 @@
+In Gradle, we define dependency configurations 
+to group dependencies together. A dependency
+configuration has a name and several properties,
+such as a description and is actually a special
+type of FileCollection. Configurations can extend
+from each other, so we can build a hierarchy of
+configurations in our build files. Gradle plugins
+can also add new configurations to our project,
+for example, the Java plugin adds several new c
+onfigurations, such as compile and testRuntime,
+to our project. The compile configuration is then
+used to define the dependencies that are needed
+to compile our source tree. The dependency configurations
+are defined with a configurations configuration block.
+Inside the block, we can define new configurations
+for our build. All configurations are added to the
+project's ConfigurationContainer object.
