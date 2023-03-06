@@ -1,0 +1,43 @@
+1. If the total Price Exceeds 12 Rupees , apply a discount of 8% on the total price
+2. If the User has bought more than 10 Apples, automatically add a Product called "PaperBag" with Zero price
+3. Track the total Number of ShoppingCarts created so far
+4. If the totalPrice is less than 5 add a shippingCost of 5 Rs to the totalPrice
+
+5. Implement InventoryDB
+
+
+static void deductProduct(String productName, int count) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getName() == productName) {
+                int currentProuductCount = productList.get(i).getCount();
+                productList.get(i).setCount(currentProuductCount - count);
+            }
+        }
+    }
+
+    static int remainingProduct(String productName) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getName() == productName) {
+                return productList.get(i).getCount();
+            }
+        }
+        return 0;
+    }
+
+    static boolean isProductAvailable(String productName, int count) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getName() == productName && productList.get(i).getCount() == count) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static double getProductPrice(String productName) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getName() == productName) {
+                return productList.get(i).getUnitPrice();
+            }
+        }
+        return 0;
+    }
